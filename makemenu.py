@@ -27,7 +27,9 @@ def makemenu(file):
     s = filelines(file)
     det = min(map(lambda x: x[0], s))
     for dep, title in s:
-        res += "    " * (dep - det) + "* " + title + "\n"
+        tmp = "    " * (dep - det) + "* "
+        tmp += "[%s](./%s#%s)\n" % (title, file, title)
+        res += tmp
     return res + "\n"
 
 
