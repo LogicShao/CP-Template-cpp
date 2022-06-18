@@ -23,10 +23,11 @@ def filelines(file):
 
 
 def makemenu(file):
-    res = "## [%s](./%s)\n\n" % (file.replace(".md", ""), file)
+    res = "## [%s](./%s)\n\n" % (file.replace(".md", "")[2:], file)
     s = filelines(file)
+    det = min(map(lambda x: x[0], s))
     for dep, title in s:
-        res += "    " * (dep - 1) + title + "\n"
+        res += "    " * (dep - det) + "* " + title + "\n"
     return res + "\n"
 
 
