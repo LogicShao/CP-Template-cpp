@@ -91,52 +91,52 @@ int h[N], e[M], ne[M], idx;
 int d[N], f[N][22], lg[N];
 
 void add(int a, int b) {
-	e[idx] = b, ne[idx] = h[a], h[a] = idx ++;
+    e[idx] = b, ne[idx] = h[a], h[a] = idx ++;
 }
 
 void dfs(int now, int fa) {
-	f[now][0] = fa, d[now] = d[fa] + 1;
-	for (int i = 1; i <= lg[d[now]]; ++ i)
-		f[now][i] = f[f[now][i - 1]][i - 1];
+    f[now][0] = fa, d[now] = d[fa] + 1;
+    for (int i = 1; i <= lg[d[now]]; ++ i)
+        f[now][i] = f[f[now][i - 1]][i - 1];
 
-	for (int i = h[now]; ~i; i = ne[i]) {
-		int j = e[i];
-		if (j != fa) dfs(j, now);
-	}
+    for (int i = h[now]; ~i; i = ne[i]) {
+        int j = e[i];
+        if (j != fa) dfs(j, now);
+    }
 }
 
 int lca(int x, int y) {
-	if (d[x] < d[y]) swap(x, y);
-	while (d[x] > d[y])
-		x = f[x][lg[d[x] - d[y]] - 1];
+    if (d[x] < d[y]) swap(x, y);
+    while (d[x] > d[y])
+        x = f[x][lg[d[x] - d[y]] - 1];
 
-	if (x == y) return x;
+    if (x == y) return x;
 
-	for (int k = lg[d[x]] - 1; k >= 0; -- k)
-		if (f[x][k] != f[y][k])
-			x = f[x][k], y = f[y][k];
-	return f[x][0];
+    for (int k = lg[d[x]] - 1; k >= 0; -- k)
+        if (f[x][k] != f[y][k])
+            x = f[x][k], y = f[y][k];
+    return f[x][0];
 }
 
 int main() {
-	memset(h , -1, sizeof h);
+    memset(h , -1, sizeof h);
 
-	scanf("%d%d%d", &n, &m, &s);
+    scanf("%d%d%d", &n, &m, &s);
 
-	for (int i = 1; i <= n - 1; ++ i) {
-		scanf("%d%d", &x, &y);
-		add(x, y), add(y, x);
-	}
+    for (int i = 1; i <= n - 1; ++ i) {
+        scanf("%d%d", &x, &y);
+        add(x, y), add(y, x);
+    }
 
-	for (int i = 1; i <= n; ++ i)
-		lg[i] = lg[i - 1] + (1 << lg[i - 1] == i);
+    for (int i = 1; i <= n; ++ i)
+        lg[i] = lg[i - 1] + (1 << lg[i - 1] == i);
 
-	dfs(s, 0);
+    dfs(s, 0);
 
-	while (m --) {
-		scanf("%d%d", &x, &y);
-		printf("%d\n",lca(x, y));
-	}
+    while (m --) {
+        scanf("%d%d", &x, &y);
+        printf("%d\n",lca(x, y));
+    }
 }
 ```
 
