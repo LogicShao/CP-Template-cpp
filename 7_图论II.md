@@ -1,5 +1,7 @@
 # 图论II
 
+
+
 ## SPFA差分约束&判负环
 
 ```cpp
@@ -228,9 +230,9 @@ int main() {
 }
 ```
 
-## 有向图强连通分量
 
-### tarjan
+
+## 有向图强连通分量SCC
 
 tarjan之后不需要拓扑排序，按照强连通分量逆序即为一个拓扑序
 
@@ -308,3 +310,87 @@ int main() {
     printf("%d\n", sum);
 }
 ```
+
+
+
+## 无向图的双连通分量
+
+### 边双连通分量E-DCC
+
+极大的不含有桥的一个连通区域
+
+```cpp
+#include <iostream>
+#include <cstring>
+#include <algorithm>
+
+using namespace std;
+
+const int N = 5010, M = 20010;
+int h[N], e[M], ne[M], idx;
+int n, m;
+int dfn[N], low[N], timestamp;
+int stk[N], top;
+int id[N], dcc_cnt;
+int d[N];
+bool is_bridge[M];
+
+void add(int a, int b) {
+    e[idx] = b, ne[idx] = h[a], h[a] = idx ++;
+}
+
+void tarjan(int u, int from) {
+    dfn[u] = low[u] = ++ timestamp;
+    stk[++ top] = u;
+    
+    for (int i = h[u]; ~i; i = ne[i]) {
+        int j = e[i];
+        if (!dfn[j]) {
+            tarjan(j, i);
+            low[u] = min(low[u], low[j]);
+            if (dfn[u] < low[j])
+                is_bridge[i] = is_bridge[i ^ 1] = true;
+        } else if (i != (from ^ 1))
+            low[u] = min(low[u], dfn[j]);
+    }
+    
+    if (dfn[u] == low[u]) {
+        ++ dcc_cnt;
+        int y;
+        do {
+            y = stk[top --];
+            id[y] = dcc_cnt;
+        } while (u != y);
+    }
+}
+
+int main() {
+    cin.tie(0)->sync_with_stdio(0);
+    memset(h, -1, sizeof h);
+    
+    cin >> n >> m;
+    while (m --) {
+        int a, b;
+        cin >> a >> b;
+        add(a, b);
+        add(b, a);
+    }
+    
+    tarjan(1, -1);
+    
+    for (int i = 0; i < idx; ++ i)
+        if (is_bridge[i])
+            ++ d[id[e[i]]];
+            
+    int cnt = 0;
+    for (int i = 1; i <= dcc_cnt; ++ i)
+        if (d[i] == 1)
+            ++ cnt;
+            
+    cout << (cnt + 1 >> 1) << endl;
+}
+```
+
+### 点双连通分量V-DCC
+
+极大的不含有割点的一个连通区域
