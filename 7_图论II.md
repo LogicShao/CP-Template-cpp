@@ -5,14 +5,6 @@
 ## SPFA差分约束&判负环
 
 ```cpp
-#include <iostream>
-#include <cstring>
-#include <algorithm>
-
-using namespace std;
-
-typedef long long LL;
-
 const int N = 1e5 + 10, M = N * 3;
 int n, m;
 int h[N], e[M], ne[M], w[M], idx;
@@ -48,30 +40,6 @@ bool spfa(int s) {
     }
 
     return true;
-}
-
-int main() {
-    memset(h, -1, sizeof h);
-
-    scanf("%d%d", &n, &m);
-    while (m --) {
-        int t, a, b;
-        scanf("%d%d%d", &t, &a, &b);
-        if (t == 1) add(a, b, 0), add(b, a, 0);
-        else if (t == 2) add(a, b, 1);
-        else if (t == 3) add(b, a, 0);
-        else if (t == 4) add(b, a, 1);
-        else add(a, b, 0);
-    }
-
-    for (int i = 1; i <= n; ++ i) add(0, i, 1);
-
-    if (!spfa(0)) puts("-1");
-    else {
-        LL res = 0;
-        for (int i = 1; i <= n; ++ i) res += dist[i];
-        printf("%lld\n", res);
-    }
 }
 ```
 
@@ -237,12 +205,6 @@ int main() {
 tarjan之后不需要拓扑排序，按照强连通分量逆序即为一个拓扑序
 
 ```cpp
-#include <iostream>
-#include <cstring>
-#include <algorithm>
-
-using namespace std;
-
 const int N = 1e4 + 10, M = 5e5 + 10;
 int n, m;
 int h[N], e[M], ne[M], idx;
@@ -279,36 +241,6 @@ void tarjan(int u) {
         } while (y != u);
     }
 }
-
-int main() {
-    memset(h, -1, sizeof h);
-    scanf("%d%d", &n, &m);
-    while (m --) {
-        int a, b;
-        scanf("%d%d", &a, &b);
-        add(a, b);
-    }
-    for (int i = 1; i <= n; ++ i)
-        if (!dfn[i])
-            tarjan(i);
-    for (int i = 1; i <= n; ++ i)
-        for (int j = h[i]; ~j; j = ne[j]) {
-            int k = e[j];
-            int a = id[i], b = id[k];
-            if (a != b) dout[a] ++;
-        }
-    int zeros = 0, sum = 0;
-    for (int i = 1; i <= scc_cnt; ++ i)
-        if (!dout[i]) {
-            zeros ++;
-            sum += siz[i];
-            if (zeros > 1) {
-                sum = 0;
-                break;
-            }
-        }
-    printf("%d\n", sum);
-}
 ```
 
 
@@ -320,19 +252,11 @@ int main() {
 极大的不含有桥的一个连通区域
 
 ```cpp
-#include <iostream>
-#include <cstring>
-#include <algorithm>
-
-using namespace std;
-
-const int N = 5010, M = 20010;
 int h[N], e[M], ne[M], idx;
 int n, m;
 int dfn[N], low[N], timestamp;
 int stk[N], top;
 int id[N], dcc_cnt;
-int d[N];
 bool is_bridge[M];
 
 void add(int a, int b) {
@@ -363,34 +287,185 @@ void tarjan(int u, int from) {
         } while (u != y);
     }
 }
-
-int main() {
-    cin.tie(0)->sync_with_stdio(0);
-    memset(h, -1, sizeof h);
-    
-    cin >> n >> m;
-    while (m --) {
-        int a, b;
-        cin >> a >> b;
-        add(a, b);
-        add(b, a);
-    }
-    
-    tarjan(1, -1);
-    
-    for (int i = 0; i < idx; ++ i)
-        if (is_bridge[i])
-            ++ d[id[e[i]]];
-            
-    int cnt = 0;
-    for (int i = 1; i <= dcc_cnt; ++ i)
-        if (d[i] == 1)
-            ++ cnt;
-            
-    cout << (cnt + 1 >> 1) << endl;
-}
 ```
 
 ### 点双连通分量V-DCC
 
 极大的不含有割点的一个连通区域
+
+```cpp
+const int N = 1010, M = 1010;
+int h[N], e[M], ne[M], idx;
+int dfn[N], low[N], timestamp;
+int n, m, dcc_cnt, root;
+int stk[N], top;
+vector<int> dcc[N];
+bool cut[N]; /*判断i是否为割点*/
+
+void add(int a, int b) {
+    e[idx] = b, ne[idx] = h[a], h[a] = idx ++;
+}
+
+void tarjan(int u) {
+    dfn[u] = low[u] = ++ timestamp;
+    stk[++ top] = u;
+    
+    if (u == root && h[u] == -1) {
+        dcc[++ dcc_cnt].push_back(u);
+        return;
+    }
+    
+    int cnt = 0;
+    for (int i = h[u]; ~i; i = ne[i]) {
+        int j = e[i];
+        if (!dfn[j]) {
+            tarjan(j);
+            low[u] = min(low[u], low[j]);
+            if (low[j] >= dfn[u]) {
+                ++ cnt;
+                if (u != root || cnt > 1) cut[u] = true;
+                ++ dcc_cnt;
+                int y;
+                do {
+                    y = stk[top --];
+                    dcc[dcc_cnt].push_back(y);
+                } while (y != j);
+                dcc[dcc_cnt].push_back(u);
+            }
+        } else low[u] = min(low[u], dfn[j]);
+    }
+}
+```
+
+
+
+## 欧拉回路&欧拉路径
+
+邻接表
+
+```cpp
+#include <iostream>
+#include <cstring>
+#include <algorithm>
+
+using namespace std;
+
+const int N = 1e5 + 10, M = 4e5 + 10;
+int h[N], e[M], ne[M], idx;
+int n, m, type, din[N], dout[N];
+int ans[M >> 1], cnt;
+bool used[M];
+
+void add(int a, int b) {
+    e[idx] = b, ne[idx] = h[a], h[a] = idx ++;
+}
+
+void dfs(int u) {
+    for (int &i = h[u]; ~i;) { /*防止被自环图卡*/
+        if (used[i]) {
+            i = ne[i]; continue;
+        }
+        
+        used[i] = true;
+        if (type == 1) used[i ^ 1] = true;
+        
+        int t;
+        if (type == 1) {
+            t = i / 2 + 1;
+            if (i & 1) t = -t;
+        } else t = i + 1;
+        
+        int j = e[i];
+        i = ne[i];
+        dfs(j);
+        
+        ans[++ cnt] = t;
+    }
+}
+
+int main() {
+    cin.tie(0)->sync_with_stdio(0);
+    memset(h, -1, sizeof h);
+    
+    cin >> type >> n >> m;
+    for (int i = 1; i <= m; ++ i) {
+        int a, b;
+        cin >> a >> b;
+        add(a, b);
+        if (type == 1) add(b, a);
+        ++ dout[a], ++ din[b];
+    }
+
+    if (type == 1) {
+        for (int i = 1; i <= n; ++ i)
+            if (din[i] + dout[i] & 1) {
+                cout << "NO"; return 0;
+            }
+    }
+    else {
+        for (int i = 1; i <= n; ++ i)
+            if (din[i] != dout[i]) {
+                cout << "NO"; return 0;
+            }
+    }
+
+    for (int i = 1; i <= n; ++ i)
+        if (h[i] != -1) {
+            dfs(i); break;
+        }
+    
+    if (cnt < m) {
+        cout << "NO"; return 0;
+    }
+    
+    cout << "YES\n";
+    for (int i = cnt; i; -- i) cout << ans[i] << ' ';
+}
+```
+
+邻接矩阵
+
+```cpp
+#include <iostream>
+#include <cstring>
+#include <algorithm>
+
+using namespace std;
+
+const int N = 510, M = 1110;
+int n = 500, m;
+int g[N][N];
+int ans[M], cnt;
+int d[N];
+
+void dfs(int u) {
+    for (int i = 1; i <= n; ++ i)
+        if (g[u][i]) {
+            -- g[u][i], -- g[i][u];
+            dfs(i);
+        }
+    ans[++ cnt] = u;
+}
+
+int main() {
+    cin.tie(0)->sync_with_stdio(0);
+    cin >> m;
+    while (m --) {
+        int a, b;
+        cin >> a >> b;
+        ++ g[a][b], ++ g[b][a];
+        ++ d[a], ++ d[b];
+    }
+    
+    int start = 1;
+    for (int i = 1; i <= n; ++ i)
+        if (d[i] && d[i] & 1) {
+            start = i; break;
+        }
+            
+    dfs(start);
+    
+    for (int i = cnt; i; -- i) cout << ans[i] << '\n';
+}
+```
+
