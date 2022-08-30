@@ -72,5 +72,5 @@ if __name__ == "__main__":
     with open(out, "w", encoding="UTF-8") as f:
         f.write(READMEinfo)
         for i in files:
-            removespace(i)
+            # removespace(i)
             f.write(makemenu(i))
