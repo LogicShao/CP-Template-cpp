@@ -1,25 +1,8 @@
 files = [
-    "1_基本算法.md",
-    "2_数据结构.md",
-    "3_图论I.md",
-    "4_数学知识.md",
-    "5_动态规划.md",
-    "6_网络流初步.md",
-    "7_图论II.md",
-    "8_搜索.md"
+    '1_基本算法.md', '2_数据结构.md', '3_搜索.md',
+    '4_动态规划.md', '5_图论.md', '6_数学知识.md',
 ]
-out = "README.md"
-READMEinfo = """# Templates\n
-这个仓库总结了部分算法竞赛模板  
-但困于个人能力限制，本仓库只有提高组级别的模板  
-而且个别模板质量并不高，也希望各位多多包涵  
-如果你有更好的模板或者想法，我很乐意合并你的请求  
-
-另外，本仓库中大部分模板取自 [AcWing算法全家桶](https://www.acwing.com/activity/content/2142/) 和 [算法进阶指南](https://www.acwing.com/activity/content/6/)  
-知识结构也基本类似，而少部分来自网络或个人代码，感谢Ta们对我编程学习的帮助  
-
-以下是目录:
-"""
+out = "menu.md"
 
 
 def filelines(file):
@@ -70,7 +53,6 @@ def makemenu(file):
 
 if __name__ == "__main__":
     with open(out, "w", encoding="UTF-8") as f:
-        f.write(READMEinfo)
         for i in files:
             # removespace(i)
             f.write(makemenu(i))
