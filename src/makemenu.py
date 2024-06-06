@@ -2,7 +2,8 @@ files = [
     '1_基本算法.md', '2_数据结构.md', '3_搜索.md',
     '4_动态规划.md', '5_图论.md', '6_数学知识.md',
 ]
-out = "menu.md"
+out = "0_menu.md"
+nowpath = ".\\src\\"
 
 
 def filelines(file):
@@ -52,7 +53,7 @@ def makemenu(file):
 
 
 if __name__ == "__main__":
-    with open(out, "w", encoding="UTF-8") as f:
+    with open(nowpath + out, "w", encoding="UTF-8") as f:
         for i in files:
             # removespace(i)
-            f.write(makemenu(i))
+            f.write(makemenu(nowpath + i))
