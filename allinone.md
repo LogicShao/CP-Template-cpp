@@ -1654,7 +1654,7 @@ void calc(int x) {
     choose.push_back(x); // not choose
     calc(x + 1);
     choose.pop_back();
-};
+}
 ```
 
 #### 组合型
@@ -1672,7 +1672,7 @@ void calc(int x) {
     calc(x + 1);
     choose.pop_back();
     calc(x + 1); // choose
-};
+}
 ```
 
 #### 排列型
