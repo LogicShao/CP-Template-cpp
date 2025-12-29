@@ -1,8 +1,47 @@
 % Build: xelatex --shell-escape notes.tex
 \documentclass[UTF8]{ctexart}
 \usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage{xcolor}
+\usepackage{tocloft}
+\usepackage{minted}
+\usepackage[fencedCode]{markdown}
 \usepackage{hyperref}
-\usepackage{markdown}
+
+\definecolor{codebg}{RGB}{246,248,250}
+\definecolor{codeframe}{RGB}{225,228,232}
+
+\usemintedstyle{friendly}
+\setminted{
+  fontsize=\small,
+  breaklines=true,
+  breakanywhere=true,
+  bgcolor=codebg,
+  frame=lines,
+  framerule=0.2pt,
+  framesep=2mm,
+  rulecolor=\color{codeframe},
+  tabsize=4
+}
+
+\newcommand{\MarkdownCodeBlock}[2]{%
+  \inputminted{cpp}{#1}%
+}
+
+\markdownSetup{
+  rendererPrototypes = {
+    fencedCodeBlock = {\MarkdownCodeBlock{#1}{#2}},
+    codeBlock = {\MarkdownCodeBlock{#1}{}},
+  },
+  tightLists = false
+}
+
+\setcounter{tocdepth}{2}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsubsecleader}{\cftdotfill{\cftdotsep}}
+\setlength{\cftbeforesecskip}{4pt}
+\setlength{\cftbeforesubsecskip}{2pt}
+\setlength{\cftbeforesubsubsecskip}{1pt}
 
 \hypersetup{
   colorlinks=true,
