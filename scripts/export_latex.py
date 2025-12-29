@@ -26,7 +26,7 @@ def build_tex() -> None:
     template = TEMPLATE_PATH.read_text(encoding="utf-8")
     if "{{CONTENT}}" not in template:
         raise RuntimeError("template.tex missing {{CONTENT}} placeholder")
-    tex = template.replace("{{CONTENT}}", OUTPUT_MD.name)
+    tex = template.replace("{{CONTENT}}", f"{{{OUTPUT_MD.name}}}")
     with open(OUTPUT_TEX, "w", encoding="utf-8", newline="\n") as f:
         f.write(tex)
 

@@ -26,11 +26,12 @@ python scripts/build.py
 
 ## LaTeX 导出
 
-`dist/notes.tex` 使用 `markdown` 包解析 Markdown。建议使用 `lualatex` 编译：
+`dist/notes.tex` 使用 `markdown` 包解析 Markdown。建议使用 `xelatex` 编译：
 
 ```bash
 cd dist
-lualatex --shell-escape notes.tex
+xelatex --shell-escape notes.tex
 ```
 
+如需自动化构建，可使用：`latexmk -xelatex -shell-escape notes.tex`。
 如需完整 TeX 发行版，请安装包含 `ctex` 与 `markdown` 的 TeX Live。

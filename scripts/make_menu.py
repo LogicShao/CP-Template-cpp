@@ -10,6 +10,7 @@ CHAPTERS = [
 ]
 OUTPUT = "00_menu.md"
 CHAPTERS_DIR = Path(__file__).resolve().parents[1] / "docs" / "chapters"
+MAX_LEVELS = 3
 
 
 def file_lines(path: Path) -> list[tuple[int, str]]:
@@ -26,14 +27,17 @@ def file_lines(path: Path) -> list[tuple[int, str]]:
 
 def make_menu(path: Path) -> str:
     title = path.stem[3:]
-    res = f"## [{title}](./{path.name})\n\n"
+    res = f"## {title}\n\n"
     headings = file_lines(path)
     if not headings:
         return res + "\n"
     base = min(dep for dep, _ in headings)
     for dep, title in headings:
-        indent = "    " * (dep - base)
-        res += f"{indent}* [{title}](./{path.name}#{title})\n"
+        level = dep - base
+        if level >= MAX_LEVELS:
+            continue
+        indent = "    " * level
+        res += f"{indent}* {title}\n"
     return res + "\n"
 
 
