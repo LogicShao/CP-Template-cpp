@@ -1,2 +1,8 @@
 *.exe
 **/.vscode
+__pycache__/
+dist/*.aux
+dist/*.log
+dist/*.out
+dist/*.toc
+dist/*.synctex.gz

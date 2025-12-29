@@ -1,153 +1,155 @@
-## [src\1_基本算法](./.\src\1_基本算法.md)
+## [basic_algorithms](./01_basic_algorithms.md)
 
-* [基本算法](./.\src\1_基本算法.md#基本算法)
-    * [位运算](./.\src\1_基本算法.md#位运算)
-        * [快速幂](./.\src\1_基本算法.md#快速幂)
-        * [龟速乘](./.\src\1_基本算法.md#龟速乘)
-        * [快速乘](./.\src\1_基本算法.md#快速乘)
-    * [排序算法](./.\src\1_基本算法.md#排序算法)
-        * [1快速排序](./.\src\1_基本算法.md#1快速排序)
-        * [2归并排序](./.\src\1_基本算法.md#2归并排序)
-    * [二分](./.\src\1_基本算法.md#二分)
-        * [整数二分算法模板](./.\src\1_基本算法.md#整数二分算法模板)
-        * [1区间[l,r]被划分成[l,mid]和[mid+1,r]时使用](./.\src\1_基本算法.md#1区间[l,r]被划分成[l,mid]和[mid+1,r]时使用)
-        * [2区间[l,r]被划分成[l,mid-1]和[mid,r]时使用](./.\src\1_基本算法.md#2区间[l,r]被划分成[l,mid-1]和[mid,r]时使用)
-        * [3浮点数二分算法模板](./.\src\1_基本算法.md#3浮点数二分算法模板)
-    * [高精度](./.\src\1_基本算法.md#高精度)
-        * [1加法](./.\src\1_基本算法.md#1加法)
-        * [2减法](./.\src\1_基本算法.md#2减法)
-        * [3乘法](./.\src\1_基本算法.md#3乘法)
-        * [4除法](./.\src\1_基本算法.md#4除法)
-    * [前缀和差分](./.\src\1_基本算法.md#前缀和差分)
-        * [1一维前缀和](./.\src\1_基本算法.md#1一维前缀和)
-        * [2二维前缀和](./.\src\1_基本算法.md#2二维前缀和)
-        * [3一维差分](./.\src\1_基本算法.md#3一维差分)
-        * [4二维差分](./.\src\1_基本算法.md#4二维差分)
-    * [双指针算法](./.\src\1_基本算法.md#双指针算法)
-    * [离散化与逆序对](./.\src\1_基本算法.md#离散化与逆序对)
-        * [1哈希](./.\src\1_基本算法.md#1哈希)
-        * [2二分](./.\src\1_基本算法.md#2二分)
-    * [模拟退火](./.\src\1_基本算法.md#模拟退火)
-    * [文件读写](./.\src\1_基本算法.md#文件读写)
-    * [快读](./.\src\1_基本算法.md#快读)
+* [基本算法](./01_basic_algorithms.md#基本算法)
+    * [位运算](./01_basic_algorithms.md#位运算)
+        * [快速幂](./01_basic_algorithms.md#快速幂)
+        * [龟速乘](./01_basic_algorithms.md#龟速乘)
+        * [快速乘](./01_basic_algorithms.md#快速乘)
+    * [排序算法](./01_basic_algorithms.md#排序算法)
+        * [快速排序](./01_basic_algorithms.md#快速排序)
+        * [第 k 大数-快速选择算法](./01_basic_algorithms.md#第 k 大数-快速选择算法)
+        * [归并排序](./01_basic_algorithms.md#归并排序)
+        * [归并排序求逆序对](./01_basic_algorithms.md#归并排序求逆序对)
+    * [二分](./01_basic_algorithms.md#二分)
+        * [整数二分算法模板](./01_basic_algorithms.md#整数二分算法模板)
+        * [1. 区间 $[l, r]$ 被划分成 $[l,mid]$ 和 $[mid+1,r]$ 时使用](./01_basic_algorithms.md#1. 区间 $[l, r]$ 被划分成 $[l,mid]$ 和 $[mid+1,r]$ 时使用)
+        * [2. 区间 $[l,r]$ 被划分成 $[l,mid-1]$ 和 $[mid,r]$时使用](./01_basic_algorithms.md#2. 区间 $[l,r]$ 被划分成 $[l,mid-1]$ 和 $[mid,r]$时使用)
+        * [3. 浮点数二分算法模板](./01_basic_algorithms.md#3. 浮点数二分算法模板)
+    * [高精度](./01_basic_algorithms.md#高精度)
+        * [1. 加法](./01_basic_algorithms.md#1. 加法)
+        * [2. 减法](./01_basic_algorithms.md#2. 减法)
+        * [3. 高精度乘低精度](./01_basic_algorithms.md#3. 高精度乘低精度)
+        * [4. 高精度乘高精度](./01_basic_algorithms.md#4. 高精度乘高精度)
+        * [5. 高精度除低精度](./01_basic_algorithms.md#5. 高精度除低精度)
+    * [前缀和差分](./01_basic_algorithms.md#前缀和差分)
+        * [一维前缀和](./01_basic_algorithms.md#一维前缀和)
+        * [二维前缀和](./01_basic_algorithms.md#二维前缀和)
+        * [一维差分](./01_basic_algorithms.md#一维差分)
+        * [二维差分](./01_basic_algorithms.md#二维差分)
+    * [双指针算法](./01_basic_algorithms.md#双指针算法)
+    * [离散化+树状数组求逆序对](./01_basic_algorithms.md#离散化+树状数组求逆序对)
+        * [二分实现](./01_basic_algorithms.md#二分实现)
+    * [模拟退火](./01_basic_algorithms.md#模拟退火)
+    * [文件读写](./01_basic_algorithms.md#文件读写)
+    * [快读](./01_basic_algorithms.md#快读)
 
-## [src\2_数据结构](./.\src\2_数据结构.md)
+## [data_structures](./02_data_structures.md)
 
-* [数据结构](./.\src\2_数据结构.md#数据结构)
-    * [链表](./.\src\2_数据结构.md#链表)
-        * [1单链表](./.\src\2_数据结构.md#1单链表)
-        * [2双链表](./.\src\2_数据结构.md#2双链表)
-    * [栈](./.\src\2_数据结构.md#栈)
-        * [单调栈](./.\src\2_数据结构.md#单调栈)
-    * [队列](./.\src\2_数据结构.md#队列)
-        * [单调队列](./.\src\2_数据结构.md#单调队列)
-    * [KMP](./.\src\2_数据结构.md#KMP)
-    * [Trie树](./.\src\2_数据结构.md#Trie树)
-    * [并查集](./.\src\2_数据结构.md#并查集)
-    * [堆](./.\src\2_数据结构.md#堆)
-    * [hash表](./.\src\2_数据结构.md#hash表)
-        * [1开放寻址法](./.\src\2_数据结构.md#1开放寻址法)
-        * [2拉链法](./.\src\2_数据结构.md#2拉链法)
-        * [3字符串哈希](./.\src\2_数据结构.md#3字符串哈希)
-    * [C++STL](./.\src\2_数据结构.md#C++STL)
-    * [线段树](./.\src\2_数据结构.md#线段树)
-    * [树状数组](./.\src\2_数据结构.md#树状数组)
+* [数据结构](./02_data_structures.md#数据结构)
+    * [链表](./02_data_structures.md#链表)
+        * [1单链表](./02_data_structures.md#1单链表)
+        * [2双链表](./02_data_structures.md#2双链表)
+    * [栈](./02_data_structures.md#栈)
+        * [单调栈](./02_data_structures.md#单调栈)
+    * [队列](./02_data_structures.md#队列)
+        * [单调队列](./02_data_structures.md#单调队列)
+    * [KMP](./02_data_structures.md#KMP)
+    * [Trie树](./02_data_structures.md#Trie树)
+    * [并查集](./02_data_structures.md#并查集)
+    * [堆](./02_data_structures.md#堆)
+    * [hash表](./02_data_structures.md#hash表)
+        * [1开放寻址法](./02_data_structures.md#1开放寻址法)
+        * [2拉链法](./02_data_structures.md#2拉链法)
+        * [3字符串哈希](./02_data_structures.md#3字符串哈希)
+    * [C++STL](./02_data_structures.md#C++STL)
+    * [C++pb_ds](./02_data_structures.md#C++pb_ds)
+    * [线段树](./02_data_structures.md#线段树)
+    * [树状数组](./02_data_structures.md#树状数组)
+    * [回文串](./02_data_structures.md#回文串)
 
-## [src\3_搜索](./.\src\3_搜索.md)
+## [search](./03_search.md)
 
-* [搜索](./.\src\3_搜索.md#搜索)
-    * [DFS](./.\src\3_搜索.md#DFS)
-        * [枚举](./.\src\3_搜索.md#枚举)
-            * [指数型](./.\src\3_搜索.md#指数型)
-            * [组合型](./.\src\3_搜索.md#组合型)
-            * [排列型](./.\src\3_搜索.md#排列型)
-    * [BFS](./.\src\3_搜索.md#BFS)
-        * [Flood-Fill](./.\src\3_搜索.md#Flood-Fill)
-        * [最短距离](./.\src\3_搜索.md#最短距离)
-        * [多源BFS](./.\src\3_搜索.md#多源BFS)
-        * [最小步数](./.\src\3_搜索.md#最小步数)
-        * [双端队列BFS](./.\src\3_搜索.md#双端队列BFS)
+* [搜索](./03_search.md#搜索)
+    * [DFS](./03_search.md#DFS)
+        * [枚举](./03_search.md#枚举)
+            * [指数型](./03_search.md#指数型)
+            * [组合型](./03_search.md#组合型)
+            * [排列型](./03_search.md#排列型)
+    * [BFS](./03_search.md#BFS)
+        * [Flood-Fill](./03_search.md#Flood-Fill)
+        * [最短距离](./03_search.md#最短距离)
+        * [多源BFS](./03_search.md#多源BFS)
+        * [最小步数](./03_search.md#最小步数)
+        * [双端队列BFS](./03_search.md#双端队列BFS)
 
-## [src\4_动态规划](./.\src\4_动态规划.md)
+## [dynamic_programming](./04_dynamic_programming.md)
 
-* [背包问题](./.\src\4_动态规划.md#背包问题)
-    * [01背包问题](./.\src\4_动态规划.md#01背包问题)
-    * [完全背包](./.\src\4_动态规划.md#完全背包)
-    * [多重背包](./.\src\4_动态规划.md#多重背包)
-    * [分组背包](./.\src\4_动态规划.md#分组背包)
-* [数位DP](./.\src\4_动态规划.md#数位DP)
-* [线性DP](./.\src\4_动态规划.md#线性DP)
-    * [数字三角形](./.\src\4_动态规划.md#数字三角形)
-    * [最长上升子序列](./.\src\4_动态规划.md#最长上升子序列)
-    * [最长公共子序列](./.\src\4_动态规划.md#最长公共子序列)
-    * [区间DP](./.\src\4_动态规划.md#区间DP)
+* [背包问题](./04_dynamic_programming.md#背包问题)
+    * [01背包问题](./04_dynamic_programming.md#01背包问题)
+    * [完全背包](./04_dynamic_programming.md#完全背包)
+    * [多重背包](./04_dynamic_programming.md#多重背包)
+    * [分组背包](./04_dynamic_programming.md#分组背包)
+* [数位DP](./04_dynamic_programming.md#数位DP)
+* [线性DP](./04_dynamic_programming.md#线性DP)
+    * [数字三角形](./04_dynamic_programming.md#数字三角形)
+    * [最长上升子序列](./04_dynamic_programming.md#最长上升子序列)
+    * [最长公共子序列](./04_dynamic_programming.md#最长公共子序列)
+    * [区间DP](./04_dynamic_programming.md#区间DP)
 
-## [src\5_图论](./.\src\5_图论.md)
+## [graph_theory](./05_graph_theory.md)
 
-* [图论](./.\src\5_图论.md#图论)
-    * [存图](./.\src\5_图论.md#存图)
-    * [拓扑排序](./.\src\5_图论.md#拓扑排序)
-    * [最短路](./.\src\5_图论.md#最短路)
-        * [单源最短路](./.\src\5_图论.md#单源最短路)
-            * [所有边权都是正数](./.\src\5_图论.md#所有边权都是正数)
-                * [朴素Dijkstra算法](./.\src\5_图论.md#朴素Dijkstra算法)
-                * [堆优化的Dijkstra算法](./.\src\5_图论.md#堆优化的Dijkstra算法)
-            * [存在负权边](./.\src\5_图论.md#存在负权边)
-                * [Bellman-Ford](./.\src\5_图论.md#Bellman-Ford)
-                * [SPFA](./.\src\5_图论.md#SPFA)
-        * [多源汇最短路](./.\src\5_图论.md#多源汇最短路)
-            * [Floyd算法](./.\src\5_图论.md#Floyd算法)
-    * [最小生成树](./.\src\5_图论.md#最小生成树)
-        * [朴素版Prim](./.\src\5_图论.md#朴素版Prim)
-        * [堆优化Prim](./.\src\5_图论.md#堆优化Prim)
-        * [Kruskal](./.\src\5_图论.md#Kruskal)
-    * [二分图](./.\src\5_图论.md#二分图)
-        * [染色法](./.\src\5_图论.md#染色法)
-        * [匈牙利算法](./.\src\5_图论.md#匈牙利算法)
-    * [SPFA差分约束与判负环](./.\src\5_图论.md#SPFA差分约束与判负环)
-    * [LCA](./.\src\5_图论.md#LCA)
-        * [倍增](./.\src\5_图论.md#倍增)
-        * [树链剖分](./.\src\5_图论.md#树链剖分)
-    * [有向图强连通分量SCC](./.\src\5_图论.md#有向图强连通分量SCC)
-    * [无向图的双连通分量](./.\src\5_图论.md#无向图的双连通分量)
-        * [边双连通分量E-DCC](./.\src\5_图论.md#边双连通分量E-DCC)
-        * [点双连通分量V-DCC](./.\src\5_图论.md#点双连通分量V-DCC)
-    * [欧拉回路与欧拉路径](./.\src\5_图论.md#欧拉回路与欧拉路径)
-    * [网络流初步](./.\src\5_图论.md#网络流初步)
-        * [EK求最大流](./.\src\5_图论.md#EK求最大流)
-        * [dinic求最大流](./.\src\5_图论.md#dinic求最大流)
-        * [点分裂](./.\src\5_图论.md#点分裂)
+* [图论](./05_graph_theory.md#图论)
+    * [存图](./05_graph_theory.md#存图)
+    * [拓扑排序](./05_graph_theory.md#拓扑排序)
+    * [最短路](./05_graph_theory.md#最短路)
+        * [单源最短路](./05_graph_theory.md#单源最短路)
+            * [所有边权都是正数](./05_graph_theory.md#所有边权都是正数)
+                * [朴素Dijkstra算法](./05_graph_theory.md#朴素Dijkstra算法)
+                * [堆优化的Dijkstra算法](./05_graph_theory.md#堆优化的Dijkstra算法)
+            * [存在负权边](./05_graph_theory.md#存在负权边)
+                * [Bellman-Ford](./05_graph_theory.md#Bellman-Ford)
+                * [SPFA](./05_graph_theory.md#SPFA)
+        * [多源汇最短路](./05_graph_theory.md#多源汇最短路)
+            * [Floyd算法](./05_graph_theory.md#Floyd算法)
+    * [最小生成树](./05_graph_theory.md#最小生成树)
+        * [朴素版Prim](./05_graph_theory.md#朴素版Prim)
+        * [堆优化Prim](./05_graph_theory.md#堆优化Prim)
+        * [Kruskal](./05_graph_theory.md#Kruskal)
+    * [二分图](./05_graph_theory.md#二分图)
+        * [染色法](./05_graph_theory.md#染色法)
+        * [匈牙利算法](./05_graph_theory.md#匈牙利算法)
+    * [SPFA差分约束与判负环](./05_graph_theory.md#SPFA差分约束与判负环)
+    * [LCA](./05_graph_theory.md#LCA)
+        * [倍增](./05_graph_theory.md#倍增)
+        * [树链剖分](./05_graph_theory.md#树链剖分)
+    * [有向图强连通分量SCC](./05_graph_theory.md#有向图强连通分量SCC)
+    * [无向图的双连通分量](./05_graph_theory.md#无向图的双连通分量)
+        * [边双连通分量E-DCC](./05_graph_theory.md#边双连通分量E-DCC)
+        * [点双连通分量V-DCC](./05_graph_theory.md#点双连通分量V-DCC)
+    * [欧拉回路与欧拉路径](./05_graph_theory.md#欧拉回路与欧拉路径)
+    * [网络流初步](./05_graph_theory.md#网络流初步)
+        * [EK求最大流](./05_graph_theory.md#EK求最大流)
+        * [dinic求最大流](./05_graph_theory.md#dinic求最大流)
+        * [点分裂](./05_graph_theory.md#点分裂)
 
-## [src\6_数学知识](./.\src\6_数学知识.md)
+## [math](./06_math.md)
 
-* [数学知识](./.\src\6_数学知识.md#数学知识)
-    * [数论](./.\src\6_数学知识.md#数论)
-        * [试除法判定质数](./.\src\6_数学知识.md#试除法判定质数)
-        * [分解质因数](./.\src\6_数学知识.md#分解质因数)
-        * [筛质数](./.\src\6_数学知识.md#筛质数)
-        * [试除法求约数](./.\src\6_数学知识.md#试除法求约数)
-        * [约数个数](./.\src\6_数学知识.md#约数个数)
-        * [约数之和](./.\src\6_数学知识.md#约数之和)
-        * [最大公约数](./.\src\6_数学知识.md#最大公约数)
-    * [快速幂](./.\src\6_数学知识.md#快速幂)
-        * [快速幂求逆元](./.\src\6_数学知识.md#快速幂求逆元)
-        * [线性逆元](./.\src\6_数学知识.md#线性逆元)
-    * [拓展欧几里得](./.\src\6_数学知识.md#拓展欧几里得)
-        * [线性同余方程](./.\src\6_数学知识.md#线性同余方程)
-    * [中国剩余定理](./.\src\6_数学知识.md#中国剩余定理)
-    * [组合计数](./.\src\6_数学知识.md#组合计数)
-    * [高斯消元](./.\src\6_数学知识.md#高斯消元)
-    * [简单博弈论](./.\src\6_数学知识.md#简单博弈论)
-    * [容斥原理](./.\src\6_数学知识.md#容斥原理)
-    * [拓展欧拉定理](./.\src\6_数学知识.md#拓展欧拉定理)
+* [数学知识](./06_math.md#数学知识)
+    * [数论](./06_math.md#数论)
+        * [试除法判定质数](./06_math.md#试除法判定质数)
+        * [分解质因数](./06_math.md#分解质因数)
+        * [筛质数](./06_math.md#筛质数)
+        * [试除法求约数](./06_math.md#试除法求约数)
+        * [约数个数](./06_math.md#约数个数)
+        * [约数之和](./06_math.md#约数之和)
+        * [最大公约数](./06_math.md#最大公约数)
+    * [快速幂](./06_math.md#快速幂)
+        * [快速幂求逆元](./06_math.md#快速幂求逆元)
+        * [线性逆元](./06_math.md#线性逆元)
+    * [拓展欧几里得](./06_math.md#拓展欧几里得)
+        * [线性同余方程](./06_math.md#线性同余方程)
+    * [中国剩余定理](./06_math.md#中国剩余定理)
+    * [组合计数](./06_math.md#组合计数)
+    * [高斯消元](./06_math.md#高斯消元)
+        * [线性基](./06_math.md#线性基)
+    * [简单博弈论](./06_math.md#简单博弈论)
+    * [容斥原理](./06_math.md#容斥原理)
+    * [拓展欧拉定理](./06_math.md#拓展欧拉定理)
+
 
 # 基本算法
 
-
-
 ## 位运算
-
-***
 
 ### 快速幂
 
@@ -188,29 +190,40 @@ ull mul(ull a, ull b, ull p) {
 }
 ```
 
-
-
 ## 排序算法
 
-***
-
-### 1快速排序
+### 快速排序
 
 ```c++
 void q_sort(int l, int r) {
     if (l >= r) return;
-    int i = l - 1, j = r + 1, x = a[l + r >> 1];
+    int i = l - 1, j = r + 1, x = a[rand() % (r - l + 1) + l];
     while (i < j) {
         do i ++; while (x > a[i]);
         do j --; while (x < a[j]);
         if (i < j) swap(a[i], a[j]);
     }
-    q_sort(l, j), q_sort(j + 1, r); //此处边界不能换为(l,i),(i+1,r) 否则会死循环
+    q_sort(l, j), q_sort(j + 1, r);
 }
 ```
 
+### 第 k 大数-快速选择算法
 
-### 2归并排序
+```cpp
+void quick_select(std::vector<int> &a, int l, int r, int k) {
+    if (l >= r) return;
+    int i = l - 1, j = r + 1, x = a[rand() % (r - l + 1) + l];
+    while (i < j) {
+        do ++i; while (a[i] > x);
+        do --j; while (a[j] < x);
+        if (i < j) std::swap(a[i], a[j]);
+    }
+    if (j - l + 1 >= k) quick_select(a, l, j, k);
+    else quick_select(a, j + 1, r, k - (j - l + 1));
+}
+```
+
+### 归并排序
 
 ```c++
 void merge_sort(int l, int r) {
@@ -227,11 +240,27 @@ void merge_sort(int l, int r) {
 }
 ```
 
+### 归并排序求逆序对
 
+```cpp
+LL merge_sort(int l, int r, std::vector<int> &a) {
+    if (l >= r) return 0;
+    int mid = (l + r) >> 1;
+    LL res = merge_sort(l, mid, a) + merge_sort(mid + 1, r, a);
+    std::vector<int> b(r - l + 1);
+    int i = l, j = mid + 1, k = l;
+    while (i <= mid && j <= r) {
+        if (a[i] <= a[j]) b[k++] = a[i++];
+        else b[k++] = a[j++], res += mid - i + 1;
+    }
+    while (i <= mid) b[k++] = a[i++];
+    while (j <= r) b[k++] = a[j++];
+    for (int i = l; i <= r; i++) a[i] = b[i];
+    return res;
+}
+```
 
 ## 二分
-
-***
 
 ### 整数二分算法模板
 
@@ -239,9 +268,10 @@ void merge_sort(int l, int r) {
 bool check(int x) {/* ... */} // 检查x是否满足某种性质
 ```
 
-### 1区间[l,r]被划分成[l,mid]和[mid+1,r]时使用
+### 1. 区间 $[l, r]$ 被划分成 $[l,mid]$ 和 $[mid+1,r]$ 时使用
 
 ```c++
+// 也就是说左边区间是答案
 int bsearch_1(int l, int r) {
     while (l < r) {
         int mid = l + r >> 1;
@@ -252,9 +282,10 @@ int bsearch_1(int l, int r) {
 }
 ```
 
-### 2区间[l,r]被划分成[l,mid-1]和[mid,r]时使用
+### 2. 区间 $[l,r]$ 被划分成 $[l,mid-1]$ 和 $[mid,r]$时使用
 
 ```c++
+// 也就是说右边区间是答案
 int bsearch_2(int l, int r) {
     while (l < r) {
         int mid = l + r + 1 >> 1;
@@ -265,13 +296,15 @@ int bsearch_2(int l, int r) {
 }
 ```
 
-### 3浮点数二分算法模板
+### 3. 浮点数二分算法模板
 
 ```c++
 bool check(double x) {/* ... */} // 检查x是否满足某种性质
 
 double bsearch_3(double l, double r) {
     const double eps = 1e-6;   // eps 表示精度，取决于题目对精度的要求
+    // 建议使用固定次数的模板而不是控制精度的
+    // 精度太高可能出现错误
     while (r - l > eps) {
         double mid = (l + r) / 2;
         if (check(mid)) r = mid;
@@ -281,76 +314,69 @@ double bsearch_3(double l, double r) {
 }
 ```
 
-
-
 ## 高精度
 
-***
-
-### 1加法
+### 1. 加法
 
 ```c++
-vector<int> add(vector<int> &a,vector<int> &b){
+vector<int> add(vector<int> &a, vector<int> &b) {
     vector<int> c;
-    int t=0;//进位
-    for(int i=0;i<a.size() || i<b.size();i++){
-        if(i<a.size()) t+=a[i];
-        if(i<b.size()) t+=b[i];
-        c.push_back(t%10);
-        t/=10;//进位权重下降
+    int t = 0; // 进位
+    for (int i = 0; i < a.size() || i < b.size(); i++){
+        if (i < a.size()) t += a[i];
+        if (i < b.size()) t += b[i];
+        c.push_back(t % 10);
+        t /= 10;//进位权重下降
     }
-    if(t) c.push_back(1);
+    if (t) c.push_back(1);
     return c;
 }
 ```
 
-### 2减法
+### 2. 减法
 
 ```c++
-bool cmp(vector<int> &a,vector<int> &b){
-    if(a.size()!=b.size()) return a.size()>b.size();
-    for(int i=a.size();i>=0;i--)
-        if(a[i]!=b[i])
-            return a[i]>b[i];
+bool cmp(vector<int> &a, vector<int> &b) {
+    if (a.size() != b.size()) return a.size() > b.size();
+    for (int i = a.size(); i >= 0; i--)
+        if (a[i] != b[i])
+            return a[i] > b[i];
     return true;
 }
 
-vector<int> sub(vector<int> &a,vector<int> &b){
+vector<int> sub(vector<int> &a, vector<int> &b){
     vector<int> c;
-    int t=0;//借位
-    for(int i=0;i<a.size();i++){
-        t=a[i]-t;
-        if(i<b.size()) t-=b[i];
-        c.push_back((t+10)%10);
-        if(t<0) t=1;//t<0 表示借位了
-        else t=0;//否则就是没借位
+    int t = 0; // 借位
+    for (int i = 0; i < a.size(); i++){
+        t = a[i] - t;
+        if (i < b.size()) t -= b[i];
+        c.push_back((t + 10) % 10);
+        if (t < 0) t = 1; // t<0 表示借位了
+        else t = 0; // 否则就是没借位
     }
-    while(c.size()>1 && c.back()==0) c.pop_back();
+    while (c.size() > 1 && c.back() == 0) c.pop_back();
     return c;
 }
 ```
 
-### 3乘法
-
-1
+### 3. 高精度乘低精度
 
 ```c++
-vector<int> mul(vector<int> &a,int &b){
+vector<int> mul(vector<int> &a, int b){
     vector<int> c;
-    for(int i=0,t=0;i<a.size() || t;i++){//进位存在或没乘完
-        if(i<a.size()) t+=a[i]*b;
-        c.push_back(t%10);
-        t/=10;
+    for (int i = 0, t = 0; i < a.size() || t; i++){//进位存在或没乘完
+        if (i < a.size()) t += a[i] * b;
+        c.push_back(t % 10);
+        t /= 10;
     }
-    while(c.size()>1 && c.back()==0) c.pop_back();//去除前导零
+    while (c.size() > 1 && c.back() == 0) c.pop_back();//去除前导零
     return c;
 }
 ```
 
-2
+### 4. 高精度乘高精度
 
 ```c++
-// 高精乘高精
 vector<int> mul(vector<int> &a, vector<int> &b) {
     vector<int> c;
     c.resize(a.size() + b.size());
@@ -368,161 +394,107 @@ vector<int> mul(vector<int> &a, vector<int> &b) {
 }
 ```
 
-### 4除法
+### 5. 高精度除低精度
 
 ```c++
-// 高精除低精
-vector<int> div(vector<int> &a,int &b,int &r){
+vector<int> div(vector<int> &a, int b, int &r){
     vector<int> c;
-    r=0;
-    for(int i=a.size()-1;i>=0;i--){
-        r=r*10+a[i];
-        c.push_back(r/b);
-        r%=b;
+    r = 0;
+    for (int i = a.size() - 1; i >= 0; i--){
+        r = r * 10 + a[i];
+        c.push_back(r / b);
+        r %= b;
     }
-    reverse(c.begin(),c.end());
-    while(c.size()>1 && c.back()==0) c.pop_back();//去除前导零
+    reverse(c.begin(), c.end());
+    while (c.size() > 1 && c.back() == 0) c.pop_back();//去除前导零
     return c;
 }
 ```
 
-
-
 ## 前缀和差分
 
-***
-
-$$
-S[i]=\sum_{j=1}^{i}A[j]
-$$
-
-
-
-### 1一维前缀和
+### 一维前缀和
 
 ```c++
-#include<iostream>
-#include<cstdio>
-using namespace std;
-const int M=1e5+10;
-int a[M],b[M];
-int main(){
-    int n,m;
-    scanf("%d%d",&n,&m);
-    for(int i=1;i<=n;i++) scanf("%d",&a[i]);
-    for(int i=1;i<=n;i++) b[i]=a[i]+b[i-1];
-    while(m--){
-        int l,r;
-        scanf("%d%d",&l,&r);
-        printf("%d\n",b[r]-b[l-1]);
-    }
+int n, m;
+scanf("%d%d", &n, &m);
+for (int i = 1; i <= n; i++) scanf("%d", &a[i]);
+for (int i = 1; i <= n; i++) b[i] = a[i] + b[i - 1];
+while (m --) {
+    int l, r;
+    scanf("%d%d", &l, &r);
+    printf("%d\n", b[r] - b[l - 1]);
 }
 ```
 
-### 2二维前缀和
+### 二维前缀和
 
 ```c++
-#include<iostream>
-#include<cstdio>
-using namespace std;
-
-const int M=1e3+10;
-int a[M][M],b[M][M];
-int n,m,q,x1,y1,x2,y2;
-
-int main(){
-    scanf("%d%d%d",&n,&m,&q);
-    for(int i=1;i<=n;i++)
-        for(int j=1;j<=m;j++)
-            scanf("%d",&a[i][j]);
-    for(int i=1;i<=n;i++)
-        for(int j=1;j<=m;j++)
-            b[i][j]=b[i-1][j]+b[i][j-1]-b[i-1][j-1]+a[i][j];
-    while(q--){
-        scanf("%d%d%d%d",&x1,&y1,&x2,&y2);
-        printf("%d\n",b[x2][y2]-b[x1-1][y2]-b[x2][y1-1]+b[x1-1][y1-1]);
-    }
+scanf("%d%d%d", &n, &m, &q);
+for (int i = 1; i <= n; i++)
+    for (int j = 1; j <= m; j++)
+        scanf("%d", &a[i][j]);
+for (int i = 1; i <= n; i++)
+    for (int j = 1; j <= m; j++)
+        b[i][j] = b[i - 1][j] + b[i][j - 1] - b[i - 1][j - 1] + a[i][j];
+while (q --) {
+    scanf("%d%d%d%d", &x1, &y1, &x2, &y2);
+    printf("%d\n", b[x2][y2] - b[x1 - 1][y2] - b[x2][y1 - 1] + b[x1 - 1][y1 - 1]);
 }
 ```
 
-### 3一维差分
+### 一维差分
 
 ```c++
-#include<iostream>
-#include<cstdio>
-using namespace std;
-
-const int M=1e5+10;
-int a[M],b[M];
-int n,m;
-int l,r,c;
-
-void in(int l,int r,int c){//插入
-    b[l]+=c;
-    b[r+1]-=c;
+void in(int l, int r, int c) {//插入
+    b[l] += c, b[r + 1] -= c;
 }
-
-int main(){
-    scanf("%d%d",&n,&m);
-    for(int i=1;i<=n;i++) scanf("%d",&a[i]);
-    for(int i=1;i<=n;i++) b[i]=a[i]-a[i-1];//构造差分数组
-    for(int i=1;i<=m;i++){
-        scanf("%d%d%d",&l,&r,&c);
-        in(l,r,c);
+int main() {
+    scanf("%d%d", &n, &m);
+    for (int i = 1; i <= n; i++) scanf("%d", &a[i]);
+    for (int i = 1; i <= n; i++) b[i] = a[i] - a[i - 1]; //构造差分数组
+    for (int i = 1; i <= m; i++) {
+        scanf("%d%d%d", &l, &r, &c);
+        in(l, r, c);
     }
-    for(int i=1;i<=n;i++) b[i]=b[i]+b[i-1];//还原数组
-    for(int i=1;i<=n;i++) printf("%d ",b[i]);
+    for (int i = 1; i <= n; i++) b[i] = b[i] + b[i - 1]; //还原数组
+    for (int i = 1; i <= n; i++) printf("%d ", b[i]);
 }   
 ```
 
-### 4二维差分
+### 二维差分
 
 ```c++
-#include<iostream>
-#include<cstdio>
-
-using namespace std;
-
-const int M=1000+10;
-int n,m,q;
-int a[M][M],s[M][M];
-int x1,y1,x2,y2,c;
-
-void in(int x1,int y1,int x2,int y2,int c){//插入
-    s[x1][y1]+=c;
-    s[x2+1][y1]-=c;
-    s[x1][y2+1]-=c;
-    s[x2+1][y2+1]+=c;
+void in(int x1, int y1, int x2, int y2, int c) { //插入
+    s[x1    ][y1    ] += c;
+    s[x2 + 1][y1    ] -= c;
+    s[x1    ][y2 + 1] -= c;
+    s[x2 + 1][y2 + 1] += c;
 }
-
 int main(){
-    scanf("%d%d%d",&n,&m,&q);
-    for(int i=1;i<=n;i++)
-        for(int j=1;j<=m;j++)
-            scanf("%d",&a[i][j]);
-    for(int i=1;i<=n;i++)
-        for(int j=1;j<=m;j++)
-            in(i,j,i,j,a[i][j]);//构造
-    for(int i=1;i<=q;i++){
-        scanf("%d%d%d%d%d",&x1,&y1,&x2,&y2,&c);
-        in(x1,y1,x2,y2,c);
+    scanf("%d%d%d", &n, &m, &q);
+    for (int i = 1; i <= n; i++)
+        for (int j = 1; j <= m; j++)
+            scanf("%d", &a[i][j]);
+    for (int i = 1; i <= n; i++)
+        for (int j = 1; j <= m; j++)
+            in(i, j, i, j, a[i][j]);//构造
+    for (int i = 1; i <= q; i++){
+        scanf("%d%d%d%d%d", &x1, &y1, &x2, &y2, &c);
+        in(x1, y1, x2, y2, c);
     }
-    for(int i=1;i<=n;i++)
-        for(int j=1;j<=m;j++)
-            s[i][j]+=s[i-1][j]+s[i][j-1]-s[i-1][j-1];//还原
-    for(int i=1;i<=n;i++)
-        for(int j=1;j<=m;j++){
-            printf("%d ",s[i][j]);
-            if(j==m) puts("");
+    for (int i = 1; i <= n; i++)
+        for (int j = 1; j <= m; j++)
+            s[i][j] += s[i - 1][j] + s[i][j - 1] - s[i - 1][j - 1];//还原
+    for (int i = 1; i <= n; i++)
+        for (int j = 1; j <= m; j++){
+            printf("%d ", s[i][j]);
+            if (j == m) puts("");
         }
 }
 ```
 
-
-
 ## 双指针算法
-
-***
 
 ```c++
 for (int i = 0, j = 0; i < n; i ++ ) {
@@ -535,13 +507,7 @@ for (int i = 0, j = 0; i < n; i ++ ) {
 * `(1)` 对于一个序列，用两个指针维护一段区间
 * `(2)` 对于两个序列，维护某种次序，比如归并排序中合并两个有序序列的操作
 
-
-
-## 离散化与逆序对
-
-***
-
-### 1哈希
+## 离散化+树状数组求逆序对
 
 ```cpp
 #include <iostream>
@@ -597,7 +563,7 @@ int main() {
 }
 ```
 
-### 2二分
+### 二分实现
 
 ```cpp
 sort(b + 1, b + 1 + n);
@@ -606,11 +572,7 @@ for (int i = 1; i <= n; ++ i)
     a[i] = lower_bound(b + 1, b + 1 + k, a[i]) - b;
 ```
 
-
-
 ## 模拟退火
-
-***
 
 使用范围: 最优化问题，比如DP，贪心，计算几何
 
@@ -671,8 +633,6 @@ int main() {
 }
 ```
 
-
-
 ## 文件读写
 
 ***
@@ -685,21 +645,17 @@ int main() {
 // fclose(stdout);
 ```
 
-
-
 ## 快读
 
-***
-
-1cin加速:
-
-根据个人评测经验，这种方法会比 `scanf()` 还要快
+`cin` 加速：根据个人评测经验，这种方法会比 `scanf()` 还要快
 
 ```cpp
-cin.tie(0)->sync_with_stdio(0)
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+cout.tie(nullptr);
 ```
 
-2使用 `getchar()`
+使用  `getchar()`
 
 ```cpp
 template<typename T> void read(T &x) {
@@ -712,7 +668,7 @@ template<typename T> void read(T &x) {
 }
 ```
 
-3将字符先读到 `buff` 数组中再从 `buff` 中读入
+将字符先读到 `buff` 数组中再从 `buff` 中读入
 
 ```cpp
 inline char GET_CHAR() {
@@ -1631,6 +1587,7 @@ void calc(string &s, int n, bool *pre) { // 判断前缀是否回文 字符串�
     }
 }
 ```
+
 # 搜索
 
 
@@ -1654,7 +1611,7 @@ void calc(int x) {
     choose.push_back(x); // not choose
     calc(x + 1);
     choose.pop_back();
-}
+};
 ```
 
 #### 组合型
@@ -1672,7 +1629,7 @@ void calc(int x) {
     calc(x + 1);
     choose.pop_back();
     calc(x + 1); // choose
-}
+};
 ```
 
 #### 排列型
@@ -2047,6 +2004,7 @@ int main() {
 }
 ```
 
+
 ## 背包问题
 
 
@@ -2344,6 +2302,7 @@ int main() {
     cout << mi << endl;
 }
 ```
+
 
 # 图论
 
@@ -3660,7 +3619,9 @@ int main() {
         printf("%d\n", res);
     }
 }
-```# 数学知识
+```
+
+# 数学知识
 
 ## 数论
 
@@ -4330,8 +4291,6 @@ int main() {
 }
 ```
 
-
-
 ## 高斯消元
 
 ```c++
@@ -4390,6 +4349,92 @@ int main() {
     else if (t == 1) puts("Infinite group solutions");
     else puts("No solution");
 }
+```
+
+### 线性基
+
+```cpp
+using ULL = unsigned long long;
+
+template <typename T>
+void chkmax(T &a, const T &b) {
+    if (a < b) a = b;
+}
+
+struct Linear_basis {
+    ULL p[64];
+    bool flag; // 是否有 0
+
+    Linear_basis() : flag(false) {
+        memset(p, 0, sizeof p);
+    }
+
+    void insert(ULL x) {
+        for (int i = 63; i >= 0; -- i) {
+            if (x >> i & 1) {
+                if (!p[i]) {
+                    p[i] = x; return;
+                }
+                x ^= p[i];
+            }
+        }
+        flag = true;
+    }
+
+    bool check(ULL x) {
+        for (int i = 63; i >= 0; -- i) {
+            if (x >> i & 1) {
+                if (!p[i]) return false;
+                x ^= p[i];
+            }
+        }
+        return true;
+    }
+
+    ULL query_max() {
+        ULL res = 0;
+        for (int i = 63; i >= 0; -- i) {
+            chkmax(res, res ^ p[i]);
+        }
+        return res;
+    }
+
+    ULL query_min() {
+        if (flag) return 0;
+        for (int i = 0; i <= 63; ++ i) {
+            if (p[i]) return p[i];
+        }
+        return 0;
+    }
+
+    ULL query_nth_min(int k) {
+        ULL res = 0;
+        for (int i = 63; i >= 0; -- i) {
+            if (p[i]) {
+                if (k == 1) return res ^ p[i];
+                -- k;
+            }
+        }
+        return 0;
+    }
+    // 合并两个线性基
+    void merge(const Linear_basis &rhs) {
+        for (int i = 63; i >= 0; -- i) {
+            if (rhs.p[i]) insert(rhs.p[i]);
+        }
+    }
+
+    static Linear_basis merge(const Linear_basis &lhs, const Linear_basis &rhs) {
+        Linear_basis res = lhs;
+        res.merge(rhs);
+        return res;
+    }
+
+    void clear() {
+        memset(p, 0, sizeof p);
+        flag = false;
+    }
+};
 ```
 
 
@@ -4507,4 +4552,5 @@ int main() {
     cout << q_pow(a, ans, m) << endl;
 }
 ```
+
 

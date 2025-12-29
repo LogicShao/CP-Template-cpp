@@ -1,0 +1,22 @@
+% Build: lualatex --shell-escape notes.tex
+\documentclass[UTF8]{ctexart}
+\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage{hyperref}
+\usepackage{markdown}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
+}
+
+\title{CP Template Notes}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\markdownInput{ notes.md }
+
+\end{document}
