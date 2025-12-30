@@ -1,6 +1,49 @@
+# ============================================
+# C++ 编译产物
+# ============================================
 *.exe
-**/.vscode
+*.o
+*.obj
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# ============================================
+# Python 相关
+# ============================================
 __pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ============================================
+# LaTeX 编译辅助文件
+# ============================================
 dist/*.aux
 dist/*.log
 dist/*.out
@@ -18,6 +61,116 @@ dist/*.lot
 dist/*.nav
 dist/*.snm
 dist/*.vrb
+dist/*.idx
+dist/*.ilg
+dist/*.ind
+dist/*.glo
+dist/*.gls
+dist/*.glg
+dist/*.alg
+dist/*.acn
+dist/*.acr
+dist/*.ist
+dist/*.synctex(busy)
+dist/*.pdfsync
 dist/_markdown_notes/
 dist/*.markdown.*
+dist/*.luabridge.lua
+
+# LaTeX 临时文件（全局）
+*.aux
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# ============================================
+# 构建产物（根据项目实际需求调整）
+# ============================================
+# 生成的 LaTeX 文件
+dist/content.tex
+dist/notes.tex
+
+# 生成的 PDF（如果不想提交到仓库）
 dist/notes.pdf
+
+# 生成的 Markdown 合并文件
+# dist/notes.md  # 取消注释以忽略
+
+# 自动生成的目录索引
+docs/chapters/00_menu.md
+
+# ============================================
+# IDE 和编辑器
+# ============================================
+# Visual Studio Code
+.vscode/
+**/.vscode/
+*.code-workspace
+
+# JetBrains IDEs (CLion, PyCharm, IntelliJ IDEA 等)
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Vim
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+.\#*
+.dir-locals.el
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Notepad++
+*.bak
+
+# ============================================
+# 操作系统临时文件
+# ============================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.directory
+.fuse_hidden*
+
+# ============================================
+# 其他
+# ============================================
+# 临时测试文件
+temp/
+tmp/
+test_output/
+*.tmp
+
+# 私有配置或密钥文件
+.env
+.env.local
+secrets/
+*.key
+*.pem
+
+# 脚本临时文件
+scripts/temp_func.txt

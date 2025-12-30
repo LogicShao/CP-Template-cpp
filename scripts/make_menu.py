@@ -26,7 +26,7 @@ def file_lines(path: Path) -> list[tuple[int, str]]:
 
 
 def make_menu(path: Path) -> str:
-    title = path.stem[3:]
+    title = path.stem[3:].replace("_", " ").title()
     res = f"## {title}\n\n"
     headings = file_lines(path)
     if not headings:

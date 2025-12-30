@@ -1,38 +1,37 @@
-% Build: xelatex --shell-escape notes.tex
+% Build: xelatex notes.tex
 \documentclass[UTF8]{ctexart}
 \usepackage[a4paper,margin=2.2cm]{geometry}
 \usepackage{xcolor}
 \usepackage{tocloft}
-\usepackage{minted}
-\usepackage[fencedCode]{markdown}
+\usepackage{underscore}  % 允许文本中使用下划线
+\usepackage{listings}     % 代码显示
 \usepackage{hyperref}
 
 \definecolor{codebg}{RGB}{246,248,250}
 \definecolor{codeframe}{RGB}{225,228,232}
+\definecolor{keywordcolor}{RGB}{0,0,255}
+\definecolor{stringcolor}{RGB}{163,21,21}
+\definecolor{commentcolor}{RGB}{0,128,0}
 
-\usemintedstyle{friendly}
-\setminted{
-  fontsize=\small,
-  breaklines=true,
-  breakanywhere=true,
-  bgcolor=codebg,
-  frame=lines,
-  framerule=0.2pt,
-  framesep=2mm,
+% 配置 listings 代码样式
+\lstset{
+  language=C++,
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{codebg},
+  frame=single,
+  framerule=0.5pt,
   rulecolor=\color{codeframe},
-  tabsize=4
-}
-
-\newcommand{\MarkdownCodeBlock}[2]{%
-  \inputminted{cpp}{#1}%
-}
-
-\markdownSetup{
-  rendererPrototypes = {
-    fencedCodeBlock = {\MarkdownCodeBlock{#1}{#2}},
-    codeBlock = {\MarkdownCodeBlock{#1}{}},
-  },
-  tightLists = false
+  xleftmargin=5mm,
+  xrightmargin=5mm,
+  keywordstyle=\color{keywordcolor}\bfseries,
+  stringstyle=\color{stringcolor},
+  commentstyle=\color{commentcolor}\itshape,
+  breaklines=true,
+  showstringspaces=false,
+  numbers=none,
+  tabsize=4,
+  keepspaces=true,
+  columns=flexible
 }
 
 \setcounter{tocdepth}{2}
@@ -50,12 +49,14 @@
 }
 
 \title{CP Template Notes}
+\author{LogicShao}
 \date{\today}
 
 \begin{document}
 \maketitle
 \tableofcontents
 
-\markdownInput{notes.md}
+% 直接包含预处理后的 LaTeX 内容，不再使用 markdown 包处理
+\input{content.tex}
 
 \end{document}

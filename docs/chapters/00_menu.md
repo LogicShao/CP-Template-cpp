@@ -1,4 +1,4 @@
-## basic_algorithms
+## Basic Algorithms
 
 * 基本算法
     * 位运算
@@ -33,7 +33,7 @@
     * 文件读写
     * 快读
 
-## data_structures
+## Data Structures
 
 * 数据结构
     * 链表
@@ -57,7 +57,7 @@
     * 树状数组
     * 回文串
 
-## search
+## Search
 
 * 搜索
     * DFS
@@ -69,7 +69,7 @@
         * 最小步数
         * 双端队列BFS
 
-## dynamic_programming
+## Dynamic Programming
 
 * 背包问题
     * 01背包问题
@@ -83,7 +83,7 @@
     * 最长公共子序列
     * 区间DP
 
-## graph_theory
+## Graph Theory
 
 * 图论
     * 存图
@@ -112,7 +112,7 @@
         * dinic求最大流
         * 点分裂
 
-## math
+## Math
 
 * 数学知识
     * 数论
